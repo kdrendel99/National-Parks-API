@@ -25,17 +25,17 @@ namespace ParksAPI.Controllers
 
 
     //GET: api/Name
-    public IEnumerable<string> Get()
-    {
-      return new string[] { "value1", "value2" };
-    }
+    // public IEnumerable<string> Get()
+    // {
+    //   return new string[] { "value1", "value2" };
+    // }
 
-    //GET: api/Name/5
-    [HttpGet("{id}", Name = "Get")]
-    public string Get(int id)
-    {
-      return "value";
-    }
+    // GET: api/Name/5
+    // [HttpGet("{id}", Name = "Get")]
+    // public string Get(int id)
+    // {
+    //   return "value";
+    // }
 
     [AllowAnonymous]
     [HttpPost("authenticate")]

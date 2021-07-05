@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authorization;
 using ParksAPI.Models;
 
 namespace ParksAPI.Controllers
@@ -20,6 +21,8 @@ namespace ParksAPI.Controllers
       _db = db;
     }
 
+    
+    [AllowAnonymous]
     // GET api/Parks
     [HttpGet]
     public async Task<ActionResult<IEnumerable<Park>>> Get(string name, string state, string attraction)
@@ -44,6 +47,7 @@ namespace ParksAPI.Controllers
       return await query.ToListAsync();
     }
 
+    [Authorize]
     // POST api/Parks
     [HttpPost]
     public async Task<ActionResult<Park>> Post(Park park)
@@ -54,6 +58,7 @@ namespace ParksAPI.Controllers
       return CreatedAtAction(nameof(GetPark), new { id = park.ParkId }, park);
     }
 
+    [AllowAnonymous]
     // GET: api/Parks/5
     [HttpGet("{id}")]
     public async Task<ActionResult<Park>> GetPark(int id)
@@ -68,6 +73,7 @@ namespace ParksAPI.Controllers
         return park;
     }
 
+    [Authorize]
     //PUT: api/Parks/2
     [HttpPut("{id}")]
     public async Task<IActionResult> Put(int id, Park park)
@@ -101,6 +107,7 @@ namespace ParksAPI.Controllers
       return _db.Parks.Any(e => e.ParkId == id);
     }
 
+    [Authorize]
     //DELETE: api/Parks/2
     [HttpDelete("{id}")]
     public async Task<IActionResult> DeletePark(int id)
