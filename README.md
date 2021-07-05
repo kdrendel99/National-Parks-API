@@ -2,7 +2,7 @@
 
 ## Description <a id="description"></a>
 
-#### _A web API made utilizing  C#, .NET5, MySQL, and Entity that contains a database for all the National Parks in the United States. The API uses authentication for POST requests, requiring users who have an account to make POST requests.
+#### A web API made utilizing  C#, .NET5, MySQL, and Entity that contains a database for all the National Parks in the United States. The API uses authentication for POST requests, requiring users who have an account to make POST requests.
 
 #### _By **Karlson Drendel**_
 
@@ -52,7 +52,7 @@
     }
     ```
 
-* _Navigate to PierresTreats.Solution/PierresTreats_
+* _Navigate to ParksAPI.Solution/ParksAPI_
 
 * _Enter 'dotnet restore' into terminal and press enter to restore dependencies._
 
@@ -62,15 +62,15 @@
 
 ## Endpoints <a id="endpoints"></a>
 
-**GET requests**
+## GET Requests 
 *_http://localhost:5000/api/parks/_
-  *Retrieves all National Parks from the database. All 63 National Parks are available to all with GET requests.
+  *Retrieves all National Parks from the database. All 63 National Parks are available to all with GET requests.*
 *_http://localhost:5000/api/parks/?state=alaska_
-  *An example query. Follow the GET all endpoint with '?' + the category you want to filter by, =, and what you'd like to query for. The query also works with the Main Attraction category, and you can search for activities/places such as "shipwreck", "hiking", "Old Faithful", etc. You can categorize your query with the following filters: 'parkId', 'name', 'state', and 'attraction'.
+  *An example query. Follow the GET all endpoint with '?' + the category you want to filter by, =, and what you'd like to query for. The query also works with the Main Attraction category, and you can search for activities/places such as "shipwreck", "hiking", "Old Faithful", etc. You can categorize your query with the following filters: 'parkId', 'name', 'state', and 'attraction'.*
 *_http://localhost:5000/api/parks/5_
-  *Search by Park Id (alphabetized by park name, 1-63).
+  *Search by Park Id (alphabetized by park name, 1-63).*
 
-**POST requests**
+## POST Requests 
 **To make a POST request, the user must be on the authentication list (note: create user functionality and database containing users are not yet built).**
 For beta version POST functionality, follow the steps below
 *_In Postman, set your endpoint to http://localhost:5000/api/name/authenticate_
