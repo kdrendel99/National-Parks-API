@@ -103,7 +103,8 @@ For beta version POST functionality, follow the steps below
         "state": "Utah",
         "mainAttraction": "Sandstone formations, and the Virgin River"
     }
-    ```
+    
+```
 
 
 ## Known Bugs <a id="bugs"></a>
