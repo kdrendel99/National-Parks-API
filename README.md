@@ -30,7 +30,7 @@
 * _CRUD Functionality_
 * _Git_
 * _Microsoft Visual Studio Code_
-*_Entity_
+* _Entity_
 
 ## Setup/Installation Requirements <a id="setup"></a>
 
@@ -63,26 +63,29 @@
 ## Endpoints <a id="endpoints"></a>
 
 ## GET Requests 
-*_http://localhost:5000/api/parks/_
-  *Retrieves all National Parks from the database. All 63 National Parks are available to all with GET requests.*
-*_http://localhost:5000/api/parks/?state=alaska_
-  *An example query. Follow the GET all endpoint with '?' + the category you want to filter by, =, and what you'd like to query for. The query also works with the Main Attraction category, and you can search for activities/places such as "shipwreck", "hiking", "Old Faithful", etc. You can categorize your query with the following filters: 'parkId', 'name', 'state', and 'attraction'.*
-*_http://localhost:5000/api/parks/5_
-  *Search by Park Id (alphabetized by park name, 1-63).*
+* _http://localhost:5000/api/parks/_
+
+* _Retrieves all National Parks from the database. All 63 National Parks are available to all with GET requests._ 
+* _http://localhost:5000/api/parks/?state=alaska_
+
+* _An example query. Follow the GET all endpoint with '?' + the category you want to filter by, =, and what you'd like to query for. The query also works with the Main Attraction category, and you can search for activities/places such as "shipwreck", "hiking", "Old Faithful", etc. You can categorize your query with the following filters: 'parkId', 'name', 'state', and 'attraction'._ 
+
+* _http://localhost:5000/api/parks/5_
+* _Search by Park Id (alphabetized by park name, 1-63)._
 
 ## POST Requests 
 **To make a POST request, the user must be on the authentication list (note: create user functionality and database containing users are not yet built).**
 For beta version POST functionality, follow the steps below
-*_In Postman, set your endpoint to http://localhost:5000/api/name/authenticate_
-*_Click on the Body tab below the endpoint search bar, and enter the following:_
+* _In Postman, set your endpoint to http://localhost:5000/api/name/authenticate_
+* _Click on the Body tab below the endpoint search bar, and enter the following:_
 ```{"username":"testUser1", "password": "password1"}```
-*_Ensure the input type is set to JSON, and send the post request._
-*_In the return, you'll receive your API token. Save this for the next step._
+* _Ensure the input type is set to JSON, and send the post request._
+* _In the return, you'll receive your API token. Save this for the next step._
 
 
-*_Navigate to either of the GET request endpoints, and click on the Authorization tab under the endpoint box._
-*_Select 'Bearer Token', and paste your token in the token box on the right._
-*_In the body box, format your post request in the following way for POST, DELETE, or PUT:_
+* _Navigate to either of the GET request endpoints, and click on the Authorization tab under the endpoint box._
+* _Select 'Bearer Token', and paste your token in the token box on the right._
+* _In the body box, format your post request in the following way for POST, DELETE, or PUT:_
 ```
     {
         "parkId": 63,
@@ -95,18 +98,18 @@ For beta version POST functionality, follow the steps below
 
 ## Known Bugs <a id="bugs"></a>
 * _No way to create new users for authorization._
-*_User permission/authenticate list is stored in a List type instead of an encripted database (very low security)_
+* _User permission/authenticate list is stored in a List type instead of an encripted database (very low security)_
 
 
 ## License <a id="license"></a>
 
-*_Copyright <2021> Karlson Drendel_
+* _Copyright <2021> Karlson Drendel_
 
-*_Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+* _Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:_
 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE._
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 
 *[MIT](https://choosealicense.com/licenses/mit/)*
