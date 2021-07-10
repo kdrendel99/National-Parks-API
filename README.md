@@ -32,6 +32,16 @@
 * _Microsoft Visual Studio Code_
 * _Entity_
 
+## Authentication Technology
+
+* _For the API Authentication, I used Token-based JSON Authentication, or JWT. The user is required to have their login information in the List in line 15 of JwtAuthenticationManager.cs (for the time being). JWT is based access token created for claims. It's a self-contained and compact standard for access token to securely transfer claims._
+
+* _In ASP.Net Core, the authentication middleware is added in the Startup class, inside the Configure method. It is done by calling UseAuthentication method on the IApplicationBuilder instance passed to the method._
+
+_Authentication schemes are registered in the Startup class inside of the ConfigureServices method. It is done by calling AddAuthentication method on the IServiceCollection instance passed to the method. We can register multiple authentication schemes, whereas only one of them will be a default scheme._
+
+_For our project, we will use JWT. For creating a JWT, we can use different hash algorithms. We will use HS256 algorithm for this project._
+
 ## Setup/Installation Requirements <a id="setup"></a>
 
 * _Open terminal._
