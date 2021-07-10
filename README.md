@@ -38,9 +38,9 @@
 
 * _In ASP.Net Core, the authentication middleware is added in the Startup class, inside the Configure method. It is done by calling UseAuthentication method on the IApplicationBuilder instance passed to the method._
 
-_Authentication schemes are registered in the Startup class inside of the ConfigureServices method. It is done by calling AddAuthentication method on the IServiceCollection instance passed to the method. We can register multiple authentication schemes, whereas only one of them will be a default scheme._
+_Authentication schemes are registered in the Startup class inside of the ConfigureServices method. It's done by calling AddAuthentication method on the IServiceCollection instance passed to the method._
 
-_For our project, we will use JWT. For creating a JWT, we can use different hash algorithms. We will use HS256 algorithm for this project._
+_For this project, I used JWT. For creating a JWT, one can use different hash algorithms. I used HS256 algorithm for this project._
 
 ## Setup/Installation Requirements <a id="setup"></a>
 
